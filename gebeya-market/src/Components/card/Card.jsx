@@ -11,7 +11,17 @@ const Card = ({
   price
 }) => {
   return (
-    <div className="card-container" style={{ width: '420px', height: '420px' ,  border: '2px solid #C1C1C1',borderRadius: '10px', margin: 'auto', paddingTop: '10px',
+    <div className="card-container" 
+    style={{ width: '420px', height: '420px' ,
+        border: '2px solid #C1C1C1',borderRadius: '10px', margin: 'auto', 
+        paddingTop: '10px',
+        // added
+        width: '420px',
+        height: '420px',
+        border: '2px solid #C1C1C1',
+        borderRadius: '10px',
+        margin: '0',             // Reset margin here for card container
+        paddingTop: '10px'
     }}>
       {/* Frame Section */}
       <div

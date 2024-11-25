@@ -19,8 +19,8 @@ const Smallercard = ({ image, itemName }) => {
         <div
           className="frame"
           style={{
-            width: '120px',
-            height: '90px',
+            width: '125px',
+            height: '100px',
             backgroundColor: '#F2F2F2',
             position: 'relative',
             borderRadius: '8px',

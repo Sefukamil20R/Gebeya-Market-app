@@ -4,6 +4,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './Components/navbar/Navbar'
 import HomePage from './pages/Home/HomePage'
+import CartPage from './pages/Cart/CartPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
       <div>
-        <HomePage />
+        {/* <HomePage /> */}
+        <CartPage/>
         {/* <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

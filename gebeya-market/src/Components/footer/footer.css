@@ -1,0 +1,69 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 40px 40px 40px;
+    background-color:#882BEC; /* Dark background */
+    color: #fff;
+    height: 243px; /* Set the height */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+  }
+  
+  .footer-left {
+    max-width: 25%; /* Restrict left section width */
+  }
+  
+  .footer-logo {
+    width: 100px; /* Adjust logo size */
+    margin-bottom: 20px;
+  }
+  
+  .footer-socials {
+    display: flex;
+    gap: 20px; /* Space between icons */
+  }
+  
+  .footer-icon {
+    font-size: 24px; /* Adjust icon size */
+    color: #fff; /* White color */
+    transition: color 0.3s ease;
+  }
+  
+
+  
+  .footer-right {
+    display: flex;
+    justify-content:  flex-end;
+    gap: 50px; /* Space between links */
+    margin-right: 25px;
+    
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-links h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px; /* Add a small margin for a natural gap */
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove any default margin from the list */
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
