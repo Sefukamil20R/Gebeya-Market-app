@@ -1,0 +1,104 @@
+/* ShippingAddressCard.css */
+.shipping-address-card {
+    width: 100%;
+    max-width: 893px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .shipping-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .form-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Dropdown styles */
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Dropdown icon */
+  .dropdown-icon {
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  @media (max-width: 600px) {
+    /* Make City and State appear in a row */
+    .form-row {
+      flex-direction: column;
+    }
+ 
+    .form-row .form-group {
+      flex: 1;
+      width: 100%; /* Ensures they take full width */
+    }
+  
+    /* Ensure Zip code is below City and State */
+    .form-row .form-group:nth-child(3) {
+      width: 100%;
+    }
+  }
+  

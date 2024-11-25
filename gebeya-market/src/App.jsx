@@ -5,6 +5,8 @@ import './App.css'
 import Navbar from './Components/navbar/Navbar'
 import HomePage from './pages/Home/HomePage'
 import CartPage from './pages/Cart/CartPage'
+import Checkout from './pages/checkout/Checkout'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +15,8 @@ function App() {
     <>
       <div>
         {/* <HomePage /> */}
-        <CartPage/>
+        {/* <CartPage/> */}
+        <Checkout/>
         {/* <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

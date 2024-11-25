@@ -1,0 +1,23 @@
+.order-summary-card {
+    max-width: 420px;
+    margin: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .order-summary-card {
+      padding: 15px;
+      width: 90%; /* Adjust to fit smaller screens */
+    }
+    .order-summary-card img {
+      width: 62px;
+      height: 62px;
+    }
+    .order-summary-card h4 {
+      font-size: 14px;
+    }
+    .order-summary-card span,
+    .order-summary-card button {
+      font-size: 14px;
+    }
+  }
+  

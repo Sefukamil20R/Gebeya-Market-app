@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .checkout-container {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 20px; /* Add vertical spacing */
+    }
+  
+    .order-summary {
+      order: 1; /* Keep OrderSummaryCard first */
+    }
+  
+    .shipping-address {
+      order: 2; /* ShippingAddressCard follows */
+    }
+  }
+  
