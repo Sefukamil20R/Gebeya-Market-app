@@ -1,174 +1,295 @@
 /* Navbar.css */
 .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo img {
-    height: 40px;
-    width: auto;
-  }
-  
-  .auth ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .auth .user-icon {
-    cursor: pointer;
-  }
-  
-  .auth .dropdown {
-    position: relative;
-  }
-  
-  .auth .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-  }
-  
-  .auth .dropdown-menu.open {
-    display: block;
-  }
-  
-  .auth .dropdown-menu li {
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .auth .dropdown-menu li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .auth .dropdown-item.active {
-    font-weight: bold;
-  }
-  
-  .auth .dropdown-icon.flip {
-    transform: rotate(180deg);
-    transition: transform 0.3s;
-  }
-  
-  .main ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-  }
-  
-  .main .more {
-    position: relative;
-  }
-  
-  .main .more-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 10px 0;
-  }
-  
-  .main .more:hover .more-dropdown {
-    display: block;
-  }
-  
-  .main .more-dropdown li {
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .main .more-dropdown li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .main .dropdown-icon.flip {
-    transform: rotate(180deg);
-    transition: transform 0.3s;
-  }
-  
-  .right-section {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding-left: 5px;
-    padding-right: 6px;
-    width: 100%; /* Ensure the search bar stretches to available space */
-  }
-  
-  .search-bar input {
-    border: none;
-    /* padding: 5px 10px; */
-    /* border-radius: 20px; / */
-    outline: none;
-    flex: 2; /* Take up 3/4 of the available space */
-  }
-  
-  .search-bar .search-icon {
-    background-color: #6b46c1; /* Purple background */
-    color: white;
-    border-radius: 40px ; /* Round right corners */
-    padding: 9px;
-    cursor: pointer;
-    flex: 2; /* Take up 1/4 of the available space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .language-selector {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-  }
-  
-  .flag {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-  
-  .cart-icon {
-    position: relative;
-    background-color: #6b46c1;
-    color: white;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .cart-badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    padding: 2px 6px;
-  }
-  
-  /*make the code responsive sothat hamburger then logot he search bar and cart icon so when ham burger clicked the Register/sign Up , Our catagories with sub pages of women , men ,kids , accessors and More and EN/ Currency So for both currency and register/Sihn Up part the dropdown icon is faced to left and for more faced to down ward    */
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Authentication Section */
+.auth ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.auth .user-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.auth .dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.auth .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.auth .dropdown-menu.open {
+  display: block;
+}
+
+.auth .dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth .dropdown-menu li:hover {
+  background-color: #f7f7f7;
+}
+
+.auth .dropdown-item.active {
+  font-weight: bold;
+  color: #6b46c1;
+}
+
+.auth .dropdown-icon {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.auth .dropdown-icon.flip {
+  transform: rotate(180deg);
+}
+
+/* Main Menu Section */
+.main ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.main li {
+  cursor: pointer;
+  position: relative;
+}
+
+.main .more-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  width: 180px;
+  border-radius: 5px;
+}
+
+.main .more:hover .more-dropdown {
+  display: block;
+}
+
+.main .more-dropdown li {
+  padding: 10px 15px;
+  transition: background-color 0.2s;
+}
+
+.main .more-dropdown li:hover {
+  background-color: #f7f7f7;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background-color: #f9f9f9;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 200px;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.search-icon-left {
+  margin-right: 5px;
+  color: #aaa;
+}
+
+.search-icon-right {
+  background-color: #6b46c1;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+/* For Register/Sign In */
+.auth .dropdown span.register-signin {
+  display: inline-flex;
+  align-items: center; /* Ensures icon and text are vertically aligned */
+  gap: 5px; /* Adds spacing between text and icon */
+}
+
+.auth .dropdown-icon {
+  margin: 0;
+  transition: transform 0.3s;
+}
+/* Container for shop icon */
+.shop-icon-container {
+  position: relative; /* Allows absolute positioning of the notification badge */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle for the shop icon */
+.shop-circle {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  background-color: #882BEC; /* Circle background color */
+  border-radius: 50%; /* Makes it a perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Required for badge positioning */
+}
+
+/* Icon inside the circle */
+.shopping-icon {
+  color: #ffffff; /* Icon color */
+  font-size: 24px; /* Adjust size as needed */
+}
+
+/* Notification badge */
+.notification-badge {
+  position: absolute;
+  top: -5px; /* Adjust position to stick at the top-right corner */
+  right: -5px; /* Adjust position to stick at the top-right corner */
+  background-color: red; /* Badge background color */
+  color: white; /* Badge text color */
+  font-size: 12px; /* Text size inside the badge */
+  font-weight: bold;
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Makes it circular */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+}
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 25px; /* Makes the edges rounded */
+  overflow: hidden; /* Ensures content stays within the rounded container */
+  border: 1px solid #ccc; /* Optional: border for styling */
+  width: 100%; /* Adjust as needed */
+  max-width: 400px; /* Restricts the maximum width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Input Container */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  flex: 1; /* Ensures it grows to fill the available space */
+  background-color: #fff; /* Background of the input */
+}
+
+/* Search Icon in Input */
+.search-icon {
+  color: #555; /* Adjust color for the icon */
+  font-size: 18px; /* Adjust icon size */
+  margin-right: 8px; /* Space between icon and input */
+}
+
+/* Search Input */
+.search-input {
+  border: none; /* Removes default border */
+  outline: none; /* Removes focus outline */
+  flex: 1; /* Ensures it grows to fill the available space */
+  font-size: 16px;
+  color: #555; /* Text color */
+}
+
+/* Search Button */
+.search-button {
+  background-color: #882BEC; /* Purple background */
+  border: none; /* Removes default border */
+  color: #fff; /* White icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  padding: 6px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button Icon */
+.search-button-icon {
+  font-size: 18px; /* Adjust size for the search icon */
+}
+
+/* Button Hover Effect */
+.search-button:hover {
+  background-color: #6a1ebc; /* Darker shade of purple on hover */
+}
