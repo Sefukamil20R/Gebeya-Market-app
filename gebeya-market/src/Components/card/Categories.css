@@ -1,0 +1,37 @@
+/* Desktop Styles */
+.category {
+    padding: 10px 52px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #555555;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  
+  .category.active {
+    color: #ffffff;
+    background-color: #fea301;
+    border: 1px solid #fea301;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .category {
+      font-size: 10px; /* Slightly reduce font size */
+      padding: 8px 32px; /* Adjust padding */
+      margin: 5px 0; /* Add spacing for vertical stack */
+      width: 100%; /* Make categories full-width */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category {
+      font-size: 9px; /* Further reduce font size for very small screens */
+      padding: 6px 20px;
+    }
+  }
+  

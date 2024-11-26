@@ -47,11 +47,286 @@
   .explore-now-button button {
     background-color: #FEA301;
     color: black;
-    padding: 14px 65px;
+    padding: 14px 85px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+  }
+  .hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D0D0D0; /* Matches the gray background */
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 80px;
+    padding: 50px 20px;
+  }
+ 
+  .hero-content {
+    max-width: 50%;
+    z-index: 2;
   }
   
- 
   
+  .hero-content h1 {
+    font-size: 2rem;
+    color: #6a3dab; /* Matches the purple header color */
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    color: #5c5c5c;
+    margin-bottom: 1.5rem;
+  }
+  
+  .explore-btn {
+    background-color: #ffa500; /* Orange button color */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .explore-btn:hover {
+    background-color: #e69500;
+  }
+  
+  .hero-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .background-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Makes circles non-interactive */
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  .purple-circle {
+    background-color: #6a3dab;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .yellow-circle {
+    background-color: #ffc107;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .lightgreen-circle {
+    background-color: #d4edda;
+    width: 15px;
+    height: 15px;
+  }
+  
+
+
+
+
+
+
+ /* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .upper-divs,
+  .lower-divs {
+    gap: 10px;
+  }
+
+  .big-header h1,
+  .description-header h1 {
+    font-size: 36px;
+  }
+
+  .description-header p {
+    font-size: 16px;
+  }
+
+  .circle-shaped-image img {
+    width: 70%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .explore-now-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust layout for mobile */
+  .upper-divs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .big-header h1,
+  .description-header h1 {
+    font-size: 36px;
+  }
+
+  .description-header p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .circle-shaped-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .explore-now-button button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  /* Hide the lower images for mobile */
+  .lower-divs .circle-shaped-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  .big-header h1,
+  .description-header h1 {
+    font-size: 28px;
+  }
+
+  .description-header p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .circle-shaped-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .explore-now-button button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .cards_display {
+    flex-wrap: nowrap;
+    overflow-x: hidden; 
+    flex-direction: column; 
+    gap: 20px; 
+    margin: 0; 
+    padding: 10px; 
+  }
+
+  .card-container {
+    flex: 0 0 auto; 
+    max-width: 100%; 
+    width: 90%;
+    margin: 0 auto; 
+  }
+
+  .card-container img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .card-container button {
+    width: 100%; 
+    padding: 10px; 
+  }
+} */
+
+/* @media screen and (max-width: 480px) {
+  .cards_display {
+    padding: 5px; 
+  }
+
+  .card-container {
+    height: auto;
+  }
+
+  .card-container button {
+    font-size: 14px; 
+    padding: 8px 12px; 
+  }
+} */
+
+@media (max-width: 768px) {
+  .categories_display, .small_container {
+    flex-wrap: wrap; /* Enable wrapping into multiple rows */
+    gap: 20px; /* Space between items */
+    margin: 0 20px; /* Reduce margin for smaller screens */
+  }
+
+  .categories_display .category-item, 
+  .small_container .small-card {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    max-width: calc(50% - 20px); /* Ensure consistent width */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center the content */
+    padding: 20px;
+  }
+
+  .hero-content {
+    max-width: 100%; /* Take full width */
+  }
+
+  .hero-image {
+    display: none; /* Hide the image */
+  }
+}
+/* Media Query for Responsive Horizontal Scrolling */
+@media (max-width: 768px) {
+  .Larger_cards {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 10px; /* Adjust gap between cards */
+    padding: 10px;
+    margin: 0; /* Remove extra margins */
+    scroll-behavior: smooth; /* Optional: smooth scrolling */
+  }
+
+  /* Style for the horizontal scrollbar */
+  .Larger_cards::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+  }
+
+  .Larger_cards::-webkit-scrollbar-thumb {
+    background: #fea301; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded scrollbar thumb */
+  }
+
+  .Larger_cards::-webkit-scrollbar-track {
+    background: #f2f2f2; /* Color of the scrollbar track */
+  }
+
+  .Larger-container {
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+    width: 230px; /* Card width */
+  }
+}

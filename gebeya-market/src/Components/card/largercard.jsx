@@ -6,7 +6,6 @@ const Largercard = ({ image, itemName ,short}) => {
           width: '250px',
           height: '320px',
           borderRadius: '10px',
-          margin: 'auto',
           paddingTop: '10px',
           display: 'flex',
           flexDirection: 'column',

@@ -6,6 +6,7 @@
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .logo img {
@@ -242,7 +243,17 @@
   max-width: 400px; /* Restricts the maximum width */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
+.responsiveSearchbar{
+  display: flex;
+  align-items: center;
+  border-radius: 25px; /* Makes the edges rounded */
+  overflow: hidden; /* Ensures content stays within the rounded container */
+  border: 1px solid #ccc; /* Optional: border for styling */
+  width: 100%; /* Adjust as needed */
+  max-width: 200px; /* Restricts the maximum width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 
+}
 /* Input Container */
 .search-input-container {
   display: flex;
@@ -292,4 +303,116 @@
 /* Button Hover Effect */
 .search-button:hover {
   background-color: #6a1ebc; /* Darker shade of purple on hover */
+}
+   
+/* General Styling */
+.nav {
+  position: relative;
+}
+
+/* Desktop Navbar */
+.navbar-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Main Menu Styling */
+.main ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+/* Dropdown for More Section */
+.main .more:hover .more-dropdown {
+  display: block;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Responsive Navbar */
+.navbar-responsive {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.responsive-logo {
+  height: 40px;
+}
+
+.responsive-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Responsive Menu Dropdown */
+.responsive-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+}
+
+.responsive-menu.open {
+  display: block;
+  max-height: 500px;
+}
+
+.responsive-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsive-menu li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.responsive-menu li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Media Query for Responsive */
+@media screen and (max-width: 768px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-responsive {
+    display: flex;
+  }
 }

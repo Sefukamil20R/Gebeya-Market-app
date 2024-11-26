@@ -1,69 +1,159 @@
+/* General Footer Styles */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px 40px 40px 40px;
-    background-color:#882BEC; /* Dark background */
-    color: #fff;
-    height: 243px; /* Set the height */
-    width: 100%; /* Full width */
-    box-sizing: border-box;
-  }
-  
-  .footer-left {
-    max-width: 25%; /* Restrict left section width */
-  }
-  
-  .footer-logo {
-    width: 100px; /* Adjust logo size */
-    margin-bottom: 20px;
-  }
-  
-  .footer-socials {
-    display: flex;
-    gap: 20px; /* Space between icons */
-  }
-  
-  .footer-icon {
-    font-size: 24px; /* Adjust icon size */
-    color: #fff; /* White color */
-    transition: color 0.3s ease;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #9847EF;
+  color: #ffffff;
+  flex-wrap: wrap;
 
-  
-  .footer-right {
-    display: flex;
-    justify-content:  flex-end;
-    gap: 50px; /* Space between links */
-    margin-right: 25px;
-    
-  }
-  .footer-links {
-    display: flex;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icon {
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ff9800;
+}
+
+.footer-right {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-right: 30px; /* Add space for the dropdown icon */
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Hidden by default */
+}
+
+.footer-links ul.active {
+  display: block; /* Show when active */
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Icon */
+.footer-dropdown-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Hidden by default on desktop */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .footer {
     flex-direction: column;
+    align-items: center;
+    margin-top: '20px';
   }
-  
-  .footer-links h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px; /* Add a small margin for a natural gap */
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  
+
+  .footer-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-left {
+    order: 4; /* Logo and icons moved to last */
+  }
+
+  .footer-right {
+    order: 1; /* About, Products, Discover come first */
+  }
+
+  /* Mobile: Only show dropdown toggle */
   .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; /* Remove any default margin from the list */
+    display: none;
   }
-  
-  .footer-links li {
-    margin-bottom: 5px;
+
+  .footer-dropdown-icon {
+    display: block; /* Show the icon on mobile */
   }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-    transition: color 0.3s ease;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-  
+
+  .footer-left {
+    order: 1; /* Left section stays first */
+  }
+
+  .footer-right {
+    order: 2; /* Right section stays second */
+  }
+
+  .footer-links ul {
+    display: block; /* Always visible on desktop */
+  }
+
+  .footer-dropdown-icon {
+    display: none; /* Hide the dropdown icon on desktop */
+  }
+}
