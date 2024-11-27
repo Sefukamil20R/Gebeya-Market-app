@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa'; // Hamburger Icon
+import { FaBars } from 'react-icons/fa'; 
 import { HiOutlineShoppingBag, HiOutlineSearch } from "react-icons/hi";
 import { FaUserLarge } from 'react-icons/fa6';
 import { FiChevronDown } from 'react-icons/fi';
@@ -22,14 +22,11 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      {/* Desktop Navbar */}
       <div className="navbar-desktop">
-        {/* Logo Section */}
         <div className="logo">
           <img src={logo} alt="Logo" />
         </div>
 
-        {/* Authentication Section */}
         <div className="auth">
           <ul>
             <li className="user-icon">
@@ -65,7 +62,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Main Menu Section */}
         <div className="main">
           <ul>
             <li>Home</li>
@@ -93,7 +89,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Right Section: Search, Language, Cart */}
         <div className="right-section">
           <div className="search-bar">
             <div className="search-input-container">
@@ -119,7 +114,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Responsive Navbar */}
       <div className="navbar-responsive">
         <FaBars className="hamburger-icon" onClick={toggleMenu} />
         <img src={logo} alt="Logo" className="responsive-logo" style={{marginLeft:'10px'}}/>
@@ -142,7 +136,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Dropdown Menu for Responsive */}
       <div className={`responsive-menu ${menuOpen ? 'open' : ''}`}>
         <ul>
           <li>Register/SignUp

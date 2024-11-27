@@ -1,4 +1,3 @@
-/* Navbar.css */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -14,7 +13,6 @@
   width: auto;
 }
 
-/* Authentication Section */
 .auth ul {
   list-style: none;
   display: flex;
@@ -178,112 +176,102 @@
   border-radius: 50%;
   padding: 2px 6px;
 }
-/* For Register/Sign In */
 .auth .dropdown span.register-signin {
   display: inline-flex;
-  align-items: center; /* Ensures icon and text are vertically aligned */
-  gap: 5px; /* Adds spacing between text and icon */
+  align-items: center; 
+  gap: 5px; 
 }
 
 .auth .dropdown-icon {
   margin: 0;
   transition: transform 0.3s;
 }
-/* Container for shop icon */
 .shop-icon-container {
-  position: relative; /* Allows absolute positioning of the notification badge */
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Circle for the shop icon */
 .shop-circle {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
-  background-color: #882BEC; /* Circle background color */
-  border-radius: 50%; /* Makes it a perfect circle */
+  width: 40px; 
+  height: 40px; 
+  background-color: #882BEC; 
+  border-radius: 50%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Required for badge positioning */
+  position: relative; 
 }
 
-/* Icon inside the circle */
 .shopping-icon {
-  color: #ffffff; /* Icon color */
-  font-size: 24px; /* Adjust size as needed */
+  color: #ffffff; 
+  font-size: 24px; 
 }
 
-/* Notification badge */
 .notification-badge {
   position: absolute;
-  top: -5px; /* Adjust position to stick at the top-right corner */
-  right: -5px; /* Adjust position to stick at the top-right corner */
-  background-color: red; /* Badge background color */
-  color: white; /* Badge text color */
-  font-size: 12px; /* Text size inside the badge */
+  top: -5px; 
+  right: -5px; 
+  background-color: red; 
+  color: white; 
+  font-size: 12px; 
   font-weight: bold;
-  width: 20px; /* Adjust size as needed */
-  height: 20px; /* Adjust size as needed */
+  width: 20px; 
+  height: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Makes it circular */
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+  border-radius: 50%; 
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); 
 }
-/* Search Bar Container */
 .search-bar {
   display: flex;
   align-items: center;
-  border-radius: 25px; /* Makes the edges rounded */
-  overflow: hidden; /* Ensures content stays within the rounded container */
-  border: 1px solid #ccc; /* Optional: border for styling */
-  width: 100%; /* Adjust as needed */
-  max-width: 400px; /* Restricts the maximum width */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  border-radius: 25px; 
+  overflow: hidden; 
+  border: 1px solid #ccc; 
+  width: 100%; 
+  max-width: 400px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 .responsiveSearchbar{
   display: flex;
   align-items: center;
-  border-radius: 25px; /* Makes the edges rounded */
-  overflow: hidden; /* Ensures content stays within the rounded container */
-  border: 1px solid #ccc; /* Optional: border for styling */
-  width: 100%; /* Adjust as needed */
-  max-width: 200px; /* Restricts the maximum width */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  border-radius: 25px; 
+  overflow: hidden; 
+  border: 1px solid #ccc; 
+  width: 100%;
+  max-width: 200px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 
 }
-/* Input Container */
 .search-input-container {
   display: flex;
   align-items: center;
   padding: 0 4px;
-  flex: 1; /* Ensures it grows to fill the available space */
-  background-color: #fff; /* Background of the input */
+  flex: 1; 
+  background-color: #fff; 
 }
 
-/* Search Icon in Input */
 .search-icon {
-  color: #555; /* Adjust color for the icon */
-  font-size: 18px; /* Adjust icon size */
-  margin-right: 8px; /* Space between icon and input */
+  color: #555; 
+  font-size: 18px; 
+  margin-right: 8px; 
 }
 
-/* Search Input */
 .search-input {
-  border: none; /* Removes default border */
-  outline: none; /* Removes focus outline */
-  flex: 1; /* Ensures it grows to fill the available space */
+  border: none; 
+  outline: none; 
+  flex: 1; 
   font-size: 16px;
-  color: #555; /* Text color */
+  color: #555; 
 }
 
-/* Search Button */
 .search-button {
-  background-color: #882BEC; /* Purple background */
-  border: none; /* Removes default border */
-  color: #fff; /* White icon color */
+  background-color: #882BEC; 
+  border: none; 
+  color: #fff; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,25 +280,21 @@
   border-bottom-right-radius: 50%;
   padding: 6px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease; 
 }
 
-/* Button Icon */
 .search-button-icon {
-  font-size: 18px; /* Adjust size for the search icon */
+  font-size: 18px; 
 }
 
-/* Button Hover Effect */
 .search-button:hover {
-  background-color: #6a1ebc; /* Darker shade of purple on hover */
+  background-color: #6a1ebc; 
 }
    
-/* General Styling */
 .nav {
   position: relative;
 }
 
-/* Desktop Navbar */
 .navbar-desktop {
   display: flex;
   justify-content: space-between;
@@ -325,26 +309,22 @@
   width: auto;
 }
 
-/* Main Menu Styling */
 .main ul {
   display: flex;
   list-style: none;
   gap: 25px;
 }
 
-/* Dropdown for More Section */
 .main .more:hover .more-dropdown {
   display: block;
 }
 
-/* Right Section */
 .right-section {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Responsive Navbar */
 .navbar-responsive {
   display: none;
   justify-content: space-between;
@@ -369,7 +349,6 @@
   align-items: center;
 }
 
-/* Responsive Menu Dropdown */
 .responsive-menu {
   display: none;
   position: absolute;
@@ -406,7 +385,6 @@
   background-color: #f9f9f9;
 }
 
-/* Media Query for Responsive */
 @media screen and (max-width: 768px) {
   .navbar-desktop {
     display: none;

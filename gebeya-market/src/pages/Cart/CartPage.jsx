@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import pink from "../../assets/pink.png";
-import Navigation from "../../Components/navbar/Navbar"; // Import the Navbar component
+import Navigation from "../../Components/navbar/Navbar"; 
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaHeart, FaStar, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -29,7 +29,6 @@ const CartPage = () => {
   }
 
   const handleSaveForLater = () => {
-    // Implement save for later functionality
     console.log("Product saved for later:", product);
   };
 
@@ -51,7 +50,6 @@ const CartPage = () => {
     <div style={{ backgroundColor: "#F5F5F5", padding: "20px" }}>
       <Navigation />
 
-      {/* Breadcrumbs */}
       <div style={{ margin: "10px 35px 10px 35px", color: "#666" }}>
         Home &gt; Kids &gt; Shoes &gt; Sneakers
       </div>
@@ -60,7 +58,6 @@ const CartPage = () => {
         style={{ display: "flex", gap: "20px", margin: "0px 35px 0px 35px" }}
       >
         <section className="First-section">
-          {/* First Section */}
           <div
             style={{
               flex: 2,
@@ -72,7 +69,6 @@ const CartPage = () => {
               position: "relative",
             }}
           >
-            {/* Top-right heart icon */}
             <div
               style={{
                 position: "absolute",
@@ -90,7 +86,6 @@ const CartPage = () => {
               <FaHeart size={20} color="red" />
             </div>
 
-            {/* Left: Image Section */}
             <div className="left">
               <div
                 style={{
@@ -109,9 +104,7 @@ const CartPage = () => {
                   }}
                 />
               </div>
-              {/* Thumbnails */}
               <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
-                {/* Array of image sources */}
                 {[pink, oneleg, fuller, waa].map((imageSrc, index) => (
                   <div
                     key={index}
@@ -121,7 +114,7 @@ const CartPage = () => {
                     }}
                   >
                     <img
-                      src={imageSrc} // Use dynamic image sources from the array
+                      src={imageSrc} 
                       alt={`Thumbnail ${index + 1}`}
                       style={{
                         width: "64px",
@@ -143,7 +136,6 @@ const CartPage = () => {
               </div>
             </div>
 
-            {/* Right: Product Details Section */}
             <div className="right" style={{ flex: 1 }}>
               <h2>{product.itemName}</h2>
               <hr></hr>
@@ -179,7 +171,6 @@ const CartPage = () => {
                 {product.rating}
               </p>
               <hr />
-              {/* Quantity */}
               <div
                 style={{ display: "flex", alignItems: "center", gap: "10px" }}
               >
@@ -199,7 +190,6 @@ const CartPage = () => {
                 </button>
               </div>
 
-              {/* Size */}
               <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
                 <p>Size:</p>
                 {["20", "25", "32", "37"].map((size) => (
@@ -217,7 +207,6 @@ const CartPage = () => {
                 ))}
               </div>
 
-              {/* Color */}
               <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
                 <p>Color:</p>
                 {["red", "blue", "green", "yellow"].map((color) => (
@@ -234,7 +223,6 @@ const CartPage = () => {
                 ))}
               </div>
 
-              {/* save for later  & Buy Now */}
               <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
                 <button
                   onClick={handleSaveForLater}
@@ -270,7 +258,6 @@ const CartPage = () => {
         </section>
         <section></section>
         <section className="second-section">
-          {/* Second Section */}
           <div
             className="second"
             style={{
@@ -285,7 +272,6 @@ const CartPage = () => {
             <>
               <p style={{ fontWeight: "bold" }}>Location</p>
 
-              {/* Location Container */}
               <div
                 style={{
                   display: "flex",
@@ -293,10 +279,10 @@ const CartPage = () => {
                   justifyContent: "space-between",
                   width: "387px",
                   height: "56px",
-                  border: "1px solid #d3d3d3", // Light dark border color
+                  border: "1px solid #d3d3d3",
                   borderRadius: "10px",
                   padding: "0 16px",
-                  marginBottom: "12px", // Spacing between containers
+                  marginBottom: "12px", 
                 }}
               >
                 <div style={{ fontWeight: "normal", color: "#000" }}>
@@ -307,7 +293,6 @@ const CartPage = () => {
                 </span>
               </div>
 
-              {/* Sublocation Container */}
               <div
                 style={{
                   display: "flex",
@@ -315,7 +300,7 @@ const CartPage = () => {
                   justifyContent: "space-between",
                   width: "387px",
                   height: "56px",
-                  border: "1px solid #d3d3d3", // Light dark border color
+                  border: "1px solid #d3d3d3", 
                   borderRadius: "10px",
                   padding: "0 16px",
                 }}
@@ -369,9 +354,9 @@ const CartPage = () => {
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap", // Allows categories to wrap on smaller screens
+            flexWrap: "wrap", 
             gap: "10px",
-            justifyContent: "flex-start", // Align items to the left
+            justifyContent: "flex-start", 
             alignItems: "flex-start",
           }}
         >
@@ -400,15 +385,15 @@ const CartPage = () => {
         <h3>Similar items you may like</h3>
         <div
           style={{
-            display: "flex", // Flexbox layout
-            gap: "10px", // Gap of 10px between items
-            padding: "20px 0", // Vertical padding
-            margin: "0", // No extra margin from parent
-            justifyContent: "flex-start", // Align cards at the start of the container
-            alignItems: "flex-start", // Prevent misalignment of items
-            flexWrap: "nowrap", // Prevent wrapping of the items
-            overflowX: "auto", // Allow horizontal scrolling when needed
-            WebkitOverflowScrolling: "touch", // For smooth scrolling on mobile devices
+            display: "flex", 
+            gap: "10px", 
+            padding: "20px 0", 
+            margin: "0", 
+            justifyContent: "flex-start", 
+            alignItems: "flex-start",
+            flexWrap: "nowrap", 
+            overflowX: "auto", 
+            WebkitOverflowScrolling: "touch", 
           }}
         >
           <Card
@@ -429,9 +414,7 @@ const CartPage = () => {
             brandName={"FENDI"}
             rating={"1k+ rating"}
           />
-          {/* Additional empty space */}
           <div style={{ flexGrow: 1 }} />{" "}
-          {/* This div will take the remaining space */}
         </div>
       </section>
       <Footer />

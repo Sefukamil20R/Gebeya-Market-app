@@ -5,7 +5,7 @@ import Footer from '../../Components/footer/footer';
 import ShippingAddressCard from '../../Components/card/shipping/ShippingAddressCard';
 import OrderSummaryCard from '../../Components/card/ordercard/OrderSummaryCard'; // Import the OrderSummaryCard component
 import PaymentCard from '../../Components/card/payement/PaymentCard';
-import './checkout.css'; // Import the CSS
+import './checkout.css'; 
 
 const Checkout = () => {
   const location = useLocation();

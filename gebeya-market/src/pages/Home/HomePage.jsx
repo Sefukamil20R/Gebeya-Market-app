@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../Components/navbar/Navbar"; // Import the Navbar component
-import "./home.css"; // Assume you are creating a separate CSS file for styles
+import Navbar from "../../Components/navbar/Navbar"; 
+import "./home.css"; 
 import Categories from "../../Components/card/Categories";
 import manpic from "../../assets/man.jpg";
 import shoe from "../../assets/whiteshoe.jpg";
@@ -34,11 +34,9 @@ import Smallercard from "../../Components/card/smallercard";
 const HomePage = () => {
   return (
     <div>
-      {/* Include Navbar component here */}
       <Navbar />
 
       <section className="container">
-        {/* Upper Section */}
         <div className="upper-divs">
           <div className="big-header">
             <h1>Gebeya</h1>
@@ -66,7 +64,6 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Lower Section */}
         <div className="lower-divs">
           <div className="circle-shaped-image">
             <img
@@ -104,7 +101,6 @@ const HomePage = () => {
           padding: "20px 50px",
         }}
       >
-        {/* Left Part: Text */}
         <div
           style={{
             fontSize: "24px",
@@ -116,7 +112,6 @@ const HomePage = () => {
           Latest Collection
         </div>
 
-        {/* Right Part: Navigation Icons */}
         <div
           style={{
             display: "flex",
@@ -125,7 +120,6 @@ const HomePage = () => {
             padding: "30px",
           }}
         >
-          {/* Left Icon inside Half Circle */}
           <div
             style={{
               position: "relative",
@@ -154,7 +148,6 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Right Icon inside Half Circle */}
           <div
             style={{
               position: "relative",
@@ -313,52 +306,6 @@ const HomePage = () => {
    
      
     
-        {/* Left Section: Text */}
-        {/* <div style={{ maxWidth: '50%' }}>
-    <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' , lineHeight: '1.5',color:'White' }}>
-      Our Curated Summer <br />
-      Collection
-    </h2>
-    <p style={{ fontSize: '16px', color: 'white', lineHeight: '1.5', marginBottom: '20px' }}>
-      Explore our curated summer collection<br />
-      featuring trending styles, vibrant colors, and<br />
-      lightweight fabrics perfect for long days<br />
-      and nights.
-    </p>
-    <button
-      style={{
-        padding: '10px 20px',
-        backgroundColor: '#FEA301',
-        color: '#FFF',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        fontSize: '16px',
-        fontWeight: 'bold',
-      }}
-    >
-      Explore Now
-    </button>
-  </div>
-
-  {/* Right Section: Image */}
-        {/* <div
-    style={{
-      flex: 1, // Ensures the image container takes all the available space on the right
-      height: '100%', // Matches the height of the parent section
-    }}
-  >
-    <img
-      src={backround}
-      alt="Summer Collection"
-      style={{
-        width: '100%', // Makes the image fill the container horizontally
-        height: '100%', // Makes the image fill the container vertically
-        objectFit: 'cover', // Ensures the image covers the space without distortion
-        borderRadius: '10px',
-      }}
-    /> */}
-        {/* </div>  */}
         <div className="hero-container">
           <div className="hero-content">
             <h1>
@@ -416,7 +363,6 @@ const HomePage = () => {
         margin: '0 30px 0 50px',
       }}
     >
-      {/* Left Part: Text */}
         <div
           style={{
             fontSize: "24px",
@@ -436,7 +382,6 @@ const HomePage = () => {
             padding: "30px 0 0 30px",
           }}
         >
-          {/* Left Icon inside Half Circle */}
           <div
             style={{
               position: "relative",
@@ -465,7 +410,6 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Right Icon inside Half Circle */}
           <div
             style={{
               position: "relative",

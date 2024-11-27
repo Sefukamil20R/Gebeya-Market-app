@@ -3,17 +3,15 @@ import './footer.css';
 import logo from '../../assets/footerlogo.png';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { FaCaretDown } from 'react-icons/fa'; // Importing the dropdown icon
+import { FaCaretDown } from 'react-icons/fa'; 
 
 const Footer = () => {
-  // State to manage dropdown visibility for each section
   const [dropdowns, setDropdowns] = useState({
     about: false,
     products: false,
     discover: false,
   });
 
-  // Toggle dropdown visibility
   const toggleDropdown = (section) => {
     setDropdowns((prev) => ({
       ...prev,
@@ -23,7 +21,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      {/* Left Section */}
       <div className="footer-left">
         <img src={logo} alt="Logo" className="footer-logo" />
         <div className="footer-socials">
@@ -39,9 +36,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Right Section */}
       <div className="footer-right">
-        {/* About Section */}
         <div className="footer-links">
           <h3>
             About
@@ -49,7 +44,7 @@ const Footer = () => {
               className="footer-dropdown-icon"
               onClick={() => toggleDropdown('about')}
             >
-              <FaCaretDown /> {/* Dropdown Icon */}
+              <FaCaretDown /> 
             </span>
           </h3>
           <ul className={dropdowns.about ? 'active' : ''}>
@@ -59,7 +54,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Products Section */}
         <div className="footer-links">
           <h3>
             Products
@@ -67,7 +61,7 @@ const Footer = () => {
               className="footer-dropdown-icon"
               onClick={() => toggleDropdown('products')}
             >
-              <FaCaretDown /> {/* Dropdown Icon */}
+              <FaCaretDown /> 
             </span>
           </h3>
           <ul className={dropdowns.products ? 'active' : ''}>
@@ -77,7 +71,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Discover Section */}
         <div className="footer-links">
           <h3>
             Discover
@@ -85,7 +78,7 @@ const Footer = () => {
               className="footer-dropdown-icon"
               onClick={() => toggleDropdown('discover')}
             >
-              <FaCaretDown /> {/* Dropdown Icon */}
+              <FaCaretDown /> 
             </span>
           </h3>
           <ul className={dropdowns.discover ? 'active' : ''}>

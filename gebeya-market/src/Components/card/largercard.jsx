@@ -13,7 +13,6 @@ const Largercard = ({ image, itemName ,short}) => {
           justifyContent: 'space-between', 
         }}
       >
-        {/* Frame Section */}
         <div
           className="frame"
           style={{
@@ -24,11 +23,10 @@ const Largercard = ({ image, itemName ,short}) => {
             borderRadius: '8px',
             overflow: 'hidden',
             display: 'flex',
-            justifyContent: 'center', // Centers image horizontally
-            alignItems: 'center', // Centers image vertically
+            justifyContent: 'center', 
+            alignItems: 'center',
           }}
         >
-          {/* Image */}
           <img
             src={image}
             alt="Product"
@@ -39,19 +37,16 @@ const Largercard = ({ image, itemName ,short}) => {
           />
         </div>
   
-        {/* Text Section */}
         <div
           style={{
-            textAlign: 'center', // Centers text inside the card
+            textAlign: 'center', 
             padding: '15px',
           }}
         >
-          {/* Item Name */}
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '8px' }}>
             {itemName}
           </h3>
   
-          {/* Subtext */}
           <p style={{ fontSize: '12px', color: '#888' }}>{short}</p>
         </div>
       </div>

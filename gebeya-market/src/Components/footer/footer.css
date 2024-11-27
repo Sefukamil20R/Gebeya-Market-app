@@ -1,4 +1,3 @@
-/* General Footer Styles */
 .footer {
   display: flex;
   justify-content: space-around;
@@ -56,18 +55,18 @@
   cursor: pointer;
   position: relative;
   display: inline-block;
-  padding-right: 30px; /* Add space for the dropdown icon */
+  padding-right: 30px; 
 }
 
 .footer-links ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 .footer-links ul.active {
-  display: block; /* Show when active */
+  display: block; 
 }
 
 .footer-links ul li {
@@ -84,7 +83,6 @@
   text-decoration: underline;
 }
 
-/* Dropdown Icon */
 .footer-dropdown-icon {
   position: absolute;
   right: 0;
@@ -92,10 +90,9 @@
   transform: translateY(-50%);
   font-size: 18px;
   cursor: pointer;
-  display: none; /* Hidden by default on desktop */
+  display: none; 
 }
 
-/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -116,24 +113,22 @@
   }
 
   .footer-left {
-    order: 4; /* Logo and icons moved to last */
+    order: 4; 
   }
 
   .footer-right {
-    order: 1; /* About, Products, Discover come first */
+    order: 1; 
   }
 
-  /* Mobile: Only show dropdown toggle */
   .footer-links ul {
     display: none;
   }
 
   .footer-dropdown-icon {
-    display: block; /* Show the icon on mobile */
+    display: block; 
   }
 }
 
-/* Desktop Styles */
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row;
@@ -142,18 +137,18 @@
   }
 
   .footer-left {
-    order: 1; /* Left section stays first */
+    order: 1; 
   }
 
   .footer-right {
-    order: 2; /* Right section stays second */
+    order: 2; 
   }
 
   .footer-links ul {
-    display: block; /* Always visible on desktop */
+    display: block; 
   }
 
   .footer-dropdown-icon {
-    display: none; /* Hide the dropdown icon on desktop */
+    display: none; 
   }
 }

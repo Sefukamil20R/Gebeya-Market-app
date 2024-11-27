@@ -11,11 +11,10 @@ const Smallercard = ({ image, itemName }) => {
           paddingTop: '10px',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center', // Centers content horizontally
-          justifyContent: 'space-between', // Distributes space evenly
+          alignItems: 'center', 
+          justifyContent: 'space-between', 
         }}
       >
-        {/* Frame Section */}
         <div
           className="frame"
           style={{
@@ -26,11 +25,10 @@ const Smallercard = ({ image, itemName }) => {
             borderRadius: '8px',
             overflow: 'hidden',
             display: 'flex',
-            justifyContent: 'center', // Centers image horizontally
-            alignItems: 'center', // Centers image vertically
+            justifyContent: 'center', 
+            alignItems: 'center', 
           }}
         >
-          {/* Image */}
           <img
             src={image}
             alt="Product"
@@ -41,19 +39,16 @@ const Smallercard = ({ image, itemName }) => {
           />
         </div>
   
-        {/* Text Section */}
         <div
           style={{
-            textAlign: 'center', // Centers text inside the card
+            textAlign: 'center', 
             padding: '15px',
           }}
         >
-          {/* Item Name */}
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '8px' }}>
             {itemName}
           </h3>
   
-          {/* Subtext */}
           <p style={{ fontSize: '12px', color: '#888' }}>See All Collections</p>
         </div>
       </div>

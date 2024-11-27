@@ -15,7 +15,6 @@ const OrderSummaryCard = ({
   const total = subtotal + shipping + tax;
 
   const handlePlaceOrder = () => {
-    // Implement place order functionality
     alert("Order Placed Successfully");
     navigate("/");
   };
@@ -37,7 +36,6 @@ const OrderSummaryCard = ({
         Order Summary
       </h3>
       <hr />
-      {/* Product Info */}
       <div
         style={{
           display: "flex",
@@ -46,7 +44,6 @@ const OrderSummaryCard = ({
           marginBottom: "15px",
         }}
       >
-        {/* Product Image */}
         <div
           style={{
             width: "82px",
@@ -65,7 +62,6 @@ const OrderSummaryCard = ({
             style={{ width: "72px", height: "72px", objectFit: "cover" }}
           />
         </div>
-        {/* Product Text */}
         <div>
           <h4
             style={{
@@ -83,7 +79,6 @@ const OrderSummaryCard = ({
         </div>
       </div>
       <hr />
-      {/* Pricing Details */}
       <div
         style={{
           display: "flex",
@@ -121,7 +116,6 @@ const OrderSummaryCard = ({
         <span style={{ color: "#333333", fontWeight: "bold" }}>${tax}</span>
       </div>
       <hr />
-      {/* Total */}
       <div
         style={{
           display: "flex",
@@ -134,7 +128,6 @@ const OrderSummaryCard = ({
         <span>Total</span>
         <span>${total}</span>
       </div>
-      {/* Place Order Button */}
       <button
         onClick={handlePlaceOrder}
         style={{

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Categories.css"; // Add a CSS file for styles
+import "./Categories.css"; 
 
 const Categories = ({ text, active }) => {
   return (
