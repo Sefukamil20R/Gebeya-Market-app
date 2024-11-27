@@ -16,6 +16,7 @@ import fuller from "../../assets/fuller.png";
 import { PiKeyReturn } from "react-icons/pi";
 import waa from "../../assets/waa.png";
 import Footer from "../../Components/footer/footer";
+import './Cart.css';
 
 const CartPage = () => {
   const location = useLocation();
