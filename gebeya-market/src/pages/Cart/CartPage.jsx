@@ -1,10 +1,9 @@
-// CartPage.jsx
-import React from "react";
+import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import pink from "../../assets/pink.png";
 import Navigation from "../../Components/navbar/Navbar"; // Import the Navbar component
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { FaShoppingCart, FaHeart, FaStar } from "react-icons/fa";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaHeart, FaStar, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TbShoppingBag } from "react-icons/tb";
 import Categories from "../../Components/card/Categories";
@@ -12,15 +11,41 @@ import Card from "../../Components/card/Card";
 import GGN from "../../assets/GGN.png";
 import pinkay from "../../assets/pinkay.png";
 import { CiDeliveryTruck } from "react-icons/ci";
-
 import oneleg from "../../assets/oneleg.png";
 import fuller from "../../assets/fuller.png";
 import { PiKeyReturn } from "react-icons/pi";
-
 import waa from "../../assets/waa.png";
 import Footer from "../../Components/footer/footer";
 
 const CartPage = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const product = location.state?.product;
+  const [quantity, setQuantity] = useState(1);
+
+  if (!product) {
+    return <div>No product in cart</div>;
+  }
+
+  const handleSaveForLater = () => {
+    // Implement save for later functionality
+    console.log("Product saved for later:", product);
+  };
+
+  const handleBuyNow = () => {
+    navigate("/checkout", { state: { product, quantity } });
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div style={{ backgroundColor: "#F5F5F5", padding: "20px" }}>
       <Navigation />
@@ -65,7 +90,7 @@ const CartPage = () => {
             </div>
 
             {/* Left: Image Section */}
-            <div>
+            <div className="left">
               <div
                 style={{
                   backgroundColor: "#F2F2F2",
@@ -74,7 +99,7 @@ const CartPage = () => {
                 }}
               >
                 <img
-                  src={pink}
+                  src={product.image}
                   alt="Product"
                   style={{
                     width: "300px",
@@ -118,18 +143,18 @@ const CartPage = () => {
             </div>
 
             {/* Right: Product Details Section */}
-            <div style={{ flex: 1 }}>
-              <h2>French Kiss Bag</h2>
+            <div className="right" style={{ flex: 1 }}>
+              <h2>{product.itemName}</h2>
               <hr></hr>
               <p>
-                <strong>Brand:</strong> ALDO
+                <strong>Brand:</strong> {product.brandName}
               </p>
               <p style={{ margin: "5px 0" }}>
                 <span style={{ textDecoration: "line-through", color: "#666" }}>
                   $300
                 </span>
                 <span style={{ marginLeft: "10px", fontWeight: "bold" }}>
-                  $500
+                  ${product.price}
                 </span>
                 <button
                   style={{
@@ -149,8 +174,8 @@ const CartPage = () => {
                 + Shipping fee may vary on location
               </p>
               <p>
-                <FaStar style={{ color: "yellow", marginRight: "5px" }} /> : 2k+
-                ratings
+                <FaStar style={{ color: "yellow", marginRight: "5px" }} /> :{" "}
+                {product.rating}
               </p>
               <hr />
               {/* Quantity */}
@@ -158,11 +183,17 @@ const CartPage = () => {
                 style={{ display: "flex", alignItems: "center", gap: "10px" }}
               >
                 <p>Quantity:</p>
-                <button style={{ backgroundColor: "#FEA301", border: "none" }}>
+                <button
+                  onClick={handleDecrement}
+                  style={{ backgroundColor: "#FEA301", border: "none" }}
+                >
                   -
                 </button>
-                <span>1</span>
-                <button style={{ backgroundColor: "#FEA301", border: "none" }}>
+                <span>{quantity}</span>
+                <button
+                  onClick={handleIncrement}
+                  style={{ backgroundColor: "#FEA301", border: "none" }}
+                >
                   +
                 </button>
               </div>
@@ -202,9 +233,10 @@ const CartPage = () => {
                 ))}
               </div>
 
-              {/* Add to Cart & Buy Now */}
+              {/* save for later  & Buy Now */}
               <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
                 <button
+                  onClick={handleSaveForLater}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -217,6 +249,7 @@ const CartPage = () => {
                   <TbShoppingBag /> Save for later
                 </button>
                 <button
+                  onClick={handleBuyNow}
                   style={{
                     padding: "12px 18px 14px 18px",
                     borderRadius: "10px",
@@ -234,94 +267,93 @@ const CartPage = () => {
             </div>
           </div>
         </section>
-        <section>
-          
-        </section>
+        <section></section>
         <section className="second-section">
-        {/* Second Section */}
-        <div
-          style={{
-            flex: 1,
-            backgroundColor: "#fff",
-            padding: "20px",
-            boxSizing: "border-box",
-          }}
-        >
-          <h3 style={{ textAlign: "center" }}>Delivery & Returns</h3>
-          <hr />
-          <>
-            <p style={{ fontWeight: "bold" }}>Location</p>
+          {/* Second Section */}
+          <div
+            className="second"
+            style={{
+              flex: 1,
+              backgroundColor: "#fff",
+              padding: "20px",
+              boxSizing: "border-box",
+            }}
+          >
+            <h3 style={{ textAlign: "center" }}>Delivery & Returns</h3>
+            <hr />
+            <>
+              <p style={{ fontWeight: "bold" }}>Location</p>
 
-            {/* Location Container */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "387px",
-                height: "56px",
-                border: "1px solid #d3d3d3", // Light dark border color
-                borderRadius: "10px",
-                padding: "0 16px",
-                marginBottom: "12px", // Spacing between containers
-              }}
-            >
-              <div style={{ fontWeight: "normal", color: "#000" }}>
-                location
+              {/* Location Container */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  width: "387px",
+                  height: "56px",
+                  border: "1px solid #d3d3d3", // Light dark border color
+                  borderRadius: "10px",
+                  padding: "0 16px",
+                  marginBottom: "12px", // Spacing between containers
+                }}
+              >
+                <div style={{ fontWeight: "normal", color: "#000" }}>
+                  location
+                </div>
+                <span style={{ fontSize: "24px", color: "#000" }}>
+                  <RiArrowDropDownLine />
+                </span>
               </div>
-              <span style={{ fontSize: "24px", color: "#000" }}>
-                <RiArrowDropDownLine />
-              </span>
-            </div>
 
-            {/* Sublocation Container */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "387px",
-                height: "56px",
-                border: "1px solid #d3d3d3", // Light dark border color
-                borderRadius: "10px",
-                padding: "0 16px",
-              }}
-            >
-              <div style={{ fontWeight: "normal", color: "#000" }}>
-                Sublocation
+              {/* Sublocation Container */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  width: "387px",
+                  height: "56px",
+                  border: "1px solid #d3d3d3", // Light dark border color
+                  borderRadius: "10px",
+                  padding: "0 16px",
+                }}
+              >
+                <div style={{ fontWeight: "normal", color: "#000" }}>
+                  Sublocation
+                </div>
+                <span style={{ fontSize: "24px", color: "#000" }}>
+                  <RiArrowDropDownLine />
+                </span>
               </div>
-              <span style={{ fontSize: "24px", color: "#000" }}>
-                <RiArrowDropDownLine />
-              </span>
-            </div>
 
-            <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <CiDeliveryTruck /> Delivery 
-            </p>
-            <p style={{ lineHeight: "1.5" }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;Estimated delivery time is 1-12 business
-              days <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;For Same-Day-Delivery: Please place your
-              order before 12pm <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;Next-Day-Delivery: Orders placed after
-              12pm <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;will be delivered the next day.
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;Note: Availability may vary by location
-            </p>
-            <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <PiKeyReturn /> Return policy
-            </p>
-            <p style={{ lineHeight: "1.5" }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;Guaranteed 7-day return policy <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;For details about return shipping options,
-              please visit our &nbsp;&nbsp;&nbsp;&nbsp;Contact page
-            </p>
-          </>
-        </div>
+              <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <CiDeliveryTruck /> Delivery
+              </p>
+              <p style={{ lineHeight: "1.5" }}>
+                &nbsp;&nbsp;&nbsp;&nbsp;Estimated delivery time is 1-12 business
+                days <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;For Same-Day-Delivery: Please place your
+                order before 12pm <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Next-Day-Delivery: Orders placed after
+                12pm <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;will be delivered the next day.
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Note: Availability may vary by location
+              </p>
+              <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <PiKeyReturn /> Return policy
+              </p>
+              <p style={{ lineHeight: "1.5" }}>
+                &nbsp;&nbsp;&nbsp;&nbsp;Guaranteed 7-day return policy <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;For details about return shipping
+                options, please visit our &nbsp;&nbsp;&nbsp;&nbsp;Contact page
+              </p>
+            </>
+          </div>
         </section>
       </div>
-      
+
       <section
         className="Details"
         style={{

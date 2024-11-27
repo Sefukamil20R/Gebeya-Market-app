@@ -1,5 +1,7 @@
 import React from "react";
 import './OrderSummarycard.css';
+import { useNavigate } from 'react-router-dom';
+
 const OrderSummaryCard = ({
   image,
   productName,
@@ -9,7 +11,14 @@ const OrderSummaryCard = ({
   shipping = 10,
   tax = 5,
 }) => {
+  const navigate = useNavigate();
   const total = subtotal + shipping + tax;
+
+  const handlePlaceOrder = () => {
+    // Implement place order functionality
+    alert("Order Placed Successfully");
+    navigate("/");
+  };
 
   return (
     <div
@@ -127,6 +136,7 @@ const OrderSummaryCard = ({
       </div>
       {/* Place Order Button */}
       <button
+        onClick={handlePlaceOrder}
         style={{
           width: "100%",
           height: "53px",

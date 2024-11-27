@@ -1,7 +1,7 @@
 /* General Footer Styles */
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   padding: 20px;
   background-color: #9847EF;
@@ -39,9 +39,9 @@
 
 .footer-right {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex: 2;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 

@@ -167,7 +167,8 @@ const Card = ({
   rating,
   itemName,
   brandName,
-  price
+  price,
+  onAddToCart // Add this prop to handle "Add to Cart" button click
 }) => {
   return (
     <div
@@ -301,6 +302,7 @@ const Card = ({
         >
           <span style={{ fontSize: '18px', fontWeight: 'bold' }}>${price}</span>
           <button
+            onClick={onAddToCart} // Use the passed prop to handle "Add to Cart" button click
             style={{
               backgroundColor: '#FEA301',
               color: '#FFF',

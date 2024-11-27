@@ -1,40 +1,41 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../../Components/navbar/Navbar';
 import Footer from '../../Components/footer/footer';
 import ShippingAddressCard from '../../Components/card/shipping/ShippingAddressCard';
 import OrderSummaryCard from '../../Components/card/ordercard/OrderSummaryCard'; // Import the OrderSummaryCard component
-import pink from '../.././assets/pink.png';
 import PaymentCard from '../../Components/card/payement/PaymentCard';
+import './checkout.css'; // Import the CSS
+
 const Checkout = () => {
+  const location = useLocation();
+  const product = location.state?.product;
+
+  if (!product) {
+    return <div>No product to checkout</div>;
+  }
+
   return (
-    <div style={{ backgroundColor: '#F5F5F5'}}>
+    <div className="checkout-container">
       <Navbar />
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '10px', // Horizontal gap between the cards
-          margin : '10px 40px 10px  40px',
-        }}
-      >
-        {/* Shipping Address Card */}
-        <div style={{ flex: 2 ,           padding: '20px',
-}}> {/* Give ShippingAddressCard more space */}
+      <div className="checkout-cards">
+        <div className="shipping-card">
           <ShippingAddressCard />
         </div>
-        
-        {/* Order Summary Card */}
-        <div style={{ flex: 2  ,padding: '40px',
-}}> {/* OrderSummaryCard occupies less space */}
-          <OrderSummaryCard 
-          image={pink}
-          productName={'Burberry shine'}
-          brandName={'Fendi'}
-          price={150}
+
+        <div className="order-summary-card">
+          <OrderSummaryCard
+            image={product.image}
+            productName={product.itemName}
+            brandName={product.brandName}
+            price={product.price}
           />
         </div>
       </div>
-      <PaymentCard/>
+
+      <div className="payment-card">
+        <PaymentCard />
+      </div>
 
       <Footer />
     </div>
