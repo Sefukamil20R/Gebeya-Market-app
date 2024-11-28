@@ -21,7 +21,7 @@ Welcome to the Gebeya Market Website ! This project is a modern, fully responsiv
 
 
 
-some of Screenshots
+some of Screenshoots
 
  Desktop View:
 
