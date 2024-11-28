@@ -100,7 +100,7 @@ some of Screenshots
    Mobile View:
 
 
- ![Screenshot (137)](https://github.com/user-attachments/assets/447e797e-dcc1-497d-bdcf-4b7534e258a1)         ![Screenshot (138)](https://github.com/user-attachments/assets/a55f8d9d-b15e-48e2-ba77-5e2ec428410a)
+ ![Screenshot (137)](https://github.com/user-attachments/assets/447e797e-dcc1-497d-bdcf-4b7534e258a1)                                       ![Screenshot (138)](https://github.com/user-attachments/assets/a55f8d9d-b15e-48e2-ba77-5e2ec428410a)
 
 
 
@@ -114,23 +114,11 @@ some of Screenshots
 
 
 
+![Screenshot (136)](https://github.com/user-attachments/assets/662fb771-cce0-48b2-839f-9ad628d326ad)                                         ![Screenshot (140)](https://github.com/user-attachments/assets/6484f519-fe57-4b3b-b211-9276cfd244ba)
 
 
 
-![Screenshot (136)](https://github.com/user-attachments/assets/662fb771-cce0-48b2-839f-9ad628d326ad)
-
-
-
-![Screenshot (140)](https://github.com/user-attachments/assets/6484f519-fe57-4b3b-b211-9276cfd244ba)
-
-
-
-![Screenshot (139)](https://github.com/user-attachments/assets/0fdf0a8d-828a-44f0-a467-c66a230d3527)
-
-
-
-
-   ![Screenshot (142)](https://github.com/user-attachments/assets/a2988273-441c-456a-be3d-0bc06391393a)
+![Screenshot (139)](https://github.com/user-attachments/assets/0fdf0a8d-828a-44f0-a467-c66a230d3527)                                          ![Screenshot (142)](https://github.com/user-attachments/assets/a2988273-441c-456a-be3d-0bc06391393a)
 
 
 
@@ -139,23 +127,19 @@ some of Screenshots
 
 
 
+## 🎨 Features
 
+- **Responsive Design**: Optimized for both desktop and mobile devices.  
+- **Dynamic Navigation**: Smooth and intuitive user flow between pages.  
+- **Add to Cart Functionality**: Easily add products to the cart.  
+- **Interactive UI**: Clean, user-friendly interface designed to enhance usability.  
 
-🎨 Features
+---
 
-Responsive Design: Optimized for both desktop and mobile devices.
+## 🛠️ Built With
 
-Dynamic Navigation: Smooth and intuitive user flow between pages.
+- **React**: For building the dynamic user interface.  
+- **JavaScript**: To handle application logic.  
+- **CSS**: For styling and ensuring a visually appealing layout.  
+- **Figma Design**: As the blueprint for the UI/UX.  
 
-Add to Cart Functionality: Easily add products to the cart.
-
-Interactive UI: Clean, user-friendly interface designed to enhance usability.
-🛠️ Built With
-
-React: For building the dynamic user interface.
-
-JavaScript: To handle application logic.
-
-CSS: For styling and ensuring a visually appealing layout.
-
-Figma Design: As the blueprint for the UI/UX.
