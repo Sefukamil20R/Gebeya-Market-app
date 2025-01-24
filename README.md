@@ -143,3 +143,4 @@ Deployed Url : https://gebeya-ecommerce-website.netlify.app/
 - **CSS**: For styling and ensuring a visually appealing layout.  
 - **Figma Design**: As the blueprint for the UI/UX.  
 
+Deployed url : https://gebeya-ecommerce-website.netlify.app/
